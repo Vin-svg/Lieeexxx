@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lieeexxx's portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
 
   <section class="about">
     <h2>À propos</h2>
-    <p>18 ans, passionné de tech, de Linux, de projets maison de type Home Assistant, .</p>
+    <p>19 ans, passionné de tech, de Linux, de projets maison de type Home Assistant, .</p>
     <p>Je fais du dev (surtout Python, Flask, ESPHome), je touche un peu à tout, et j'aime quand les choses marchent <strong>localement, sans cloud vulnérable.</strong></p>
   </section>
 
@@ -80,7 +81,7 @@
             J’ai créé un bot automatisé avec <strong>Python</strong> qui publie une image météo toutes les 2 heures.
             L’image affiche la météo actuelle en Nouvelle-Calédonie.
             </p>
-            <a href="https://x.com/NC_Meteo" target="_blank" class="x-button">Voir le compte X</a>
+            <a href="https://x.com/NC_Meteo" target="_blank" class="glitch x-button">Voir le compte X</a>
         </div>
     </section>
 
@@ -147,6 +148,8 @@ const observer = new IntersectionObserver((entries, obs) => {
 sections.forEach(section => {
   observer.observe(section);
 });
+// Initialize PowerGlitch on elements with the 'glitch' class
+  PowerGlitch.glitch('.glitch');
 </script>
 
 </html>
