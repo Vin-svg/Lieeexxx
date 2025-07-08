@@ -3,153 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hey, I am Lieeexxx</title>
+  <title>Portfolio | Lieeexxx</title>
+  <meta name="description" content="Portfolio de Lieeexxx : projets tech, scripts Python, Home Assistant, gadgets, et plus encore.">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
 </head>
-
 <body>
-
-
   <header>
+    <nav>
+      <ul>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     <h1 class="glitch-text" data-text="Salut, moi c'est Lieeexxx 👋">Salut, moi c'est Lieeexxx 👋</h1>
-    <p>Je bidouille, je code, je hacke mes volets roulants avec un Wemos D1 Mini et Home Assistant ⚡Entre autres 👾</p>
+    <p class="subtitle">Je bidouille, je code, je hacke mes volets roulants avec un Wemos D1 Mini et Home Assistant ⚡<br>Entre autres 👾</p>
   </header>
 
-  <section class="about">
-    <h2>À propos</h2>
-    <p>19 ans, passionné de tech, de Linux, de projets maison de type Home Assistant, .</p>
-    <p>Je fais du dev (surtout Python, Flask, ESPHome), je touche un peu à tout, et j'aime quand les choses marchent <strong>localement, sans cloud vulnérable.</strong></p>
-  </section>
-
-  <section class="projects">
-    <h2>Certains de mes projets :</h2>
-    
-    <article class="project">
-      <h3>📡 Les statistiques <a href="https://wigle.net" target="_blank">Wigle</a></h3>
-      <p>Avec mon ami <a href="https://torik.fr" target="_blank">Torik</a>, on capte des réseaux un peu partout en NC ! Voici nos stats :</p>
-      <p>
-        <a href="https://wigle.net" target="_blank">
-          <img src="https://wigle.net/bi/KJjGzzTmVik+iNcmrSVWNA.png" alt="Statistiques WiGLE - vinvic" style="max-width:100%; height:auto; border:0;">
-          <img src="https://wigle.net/bi/a7fSR43Qm7H9lbpFtei71A.png" alt="Statistiques WiGLE - justvin" style="max-width:100%; height:auto; border:0;">
-        </a>
-      </p>
-    </article>
-
-    <article class="project">
-      <h3>💾 Script Python : Torrent ➜ MEGA</h3>
-      <p>Script Python qui télécharge un fichier via torrent sur un VPS, et l’uploade direct sur MEGA.</p>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/m7DTcxhw7KA?si=uWLF1_hiVcYdfGpF" 
-                title="Démo script Torrent vers MEGA" 
-                frameborder="0" 
-                allowfullscreen>
-        </iframe>
-      </div>
-    </article>
-
-    <article class="project">
-      <h3>🌀 Animation Blender</h3>
-      <p>Mon premier test d’animation 3D sur Blender… avec un loukoum 🤷‍♂️</p>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/wlbFZDnonDA" 
-                title="Animation Blender Loukoum" 
-                frameborder="0" 
-                allowfullscreen>
-        </iframe>
-      </div>
-    </article>
-
-    <article class="project">
-      <h3>📱 Gamify school</h3>
-      <p>Un jeu mobile pour rendre l'expérience d'apprentissage au lycée plus fun !</p>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/cJWdNXvi4po" 
-                title="Gamify School Demo" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-        </iframe>
-      </div>
-    </article>
-    
-
-    <section class="projects">
-        <h3>🌦️ Bot météo pour X (Twitter)</h3>
-        <div class="project">
-            <p>
-            J’ai créé un bot automatisé avec <strong>Python</strong> qui publie une image météo toutes les 2 heures.
-            L’image affiche la météo actuelle en Nouvelle-Calédonie.
-            </p>
-            <a href="https://x.com/NC_Meteo" target="_blank" class="glitch x-button">Voir le compte X</a>
-        </div>
+  <main>
+    <section class="about" id="about">
+      <h2>À propos</h2>
+      <p>👨‍💻 19 ans, passionné de tech, de Linux, Proxmox, de projets DIY (Home Assistant, Raspberry Pi, ESP...), et de cybersécurité.</p>
+      <p>Je développe surtout en <strong>Python</strong> (Flask, ESPHome), mais j’aime expérimenter et apprendre de nouveaux outils. J’aime quand les choses fonctionnent <strong>localement, sans cloud vulnérable</strong>.</p>
     </section>
 
+    <section class="projects" id="projects">
+      <h2>Quelques projets</h2>
+      <div class="project-grid">
+
         <article class="project">
-        <h2>🖥️ Gadget indispensable !</h2>
-        <h3>🔐 Flipper Zero</h3>
-        <p>Voici un Flipper zero, un outil très utile en terme de cybersécurité ! Il peut émuler une Yubikey sans problème, ou encore déranger les utilisateurs d'Iphone avec des attaques Bluetooth innofensives ;)  </p>
+          <h3>📡 Statistiques <a href="https://wigle.net" target="_blank" rel="noopener">Wigle</a></h3>
+          <p>Avec <a href="https://torik.fr" target="_blank" rel="noopener">Torik</a>, on capte des réseaux Wi-Fi en NC !</p>
+          <div class="wigle-stats">
+            <img src="https://wigle.net/bi/KJjGzzTmVik+iNcmrSVWNA.png" alt="Statistiques WiGLE - vinvic" loading="lazy">
+            <img src="https://wigle.net/bi/a7fSR43Qm7H9lbpFtei71A.png" alt="Statistiques WiGLE - justvin" loading="lazy">
+          </div>
+        </article>
 
-        <div class="sketchfab-embed-wrapper" style="margin-top: 1em;">
-            <iframe title="Flipper Zero" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
-            src="https://sketchfab.com/models/f8ad3fdf5f2b485ba46b0ac91626fc76/embed"
-            style="width: 100%; height: 480px;">
-            </iframe>
-            </p>
-        </div>
-    </article>
+        <article class="project">
+          <h3>💾 Script Python : Torrent ➜ MEGA.nz</h3>
+          <p>Script Python qui télécharge un fichier via torrent sur un VPS, puis l’upload sur MEGA.</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/m7DTcxhw7KA?si=uWLF1_hiVcYdfGpF"
+                    title="Démo script Torrent vers MEGA"
+                    frameborder="0"
+                    allowfullscreen loading="lazy"></iframe>
+          </div>
+        </article>
 
-  <section class="contact">
-    <h2>Me contacter</h2>
-    <p>✌️</p>
-    <ul>
-      <li>📧 Email : <a href="mailto:karatemarine@gmail.com">karatemarine@gmail.com</a></li>
-      <li>🐙 GitHub : <a href="https://github.com/Vin-svg" target="_blank">github.com/Vin-svg</a></li>
-    </ul>
-  </section>
+        <article class="project">
+          <h3>🌀 Animation 3D avec Blender</h3>
+          <p>Mon premier essai d’animation 3D sur Blender… avec un loukoum 🤷‍♂️</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/wlbFZDnonDA"
+                    title="Animation Blender Loukoum"
+                    frameborder="0"
+                    allowfullscreen loading="lazy"></iframe>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>📱 Gamify School</h3>
+          <p>Un jeu mobile pour rendre l’apprentissage au lycée plus fun !</p>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/cJWdNXvi4po"
+                    title="Gamify School Demo"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen loading="lazy"></iframe>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>🌦️ Bot météo pour X (Twitter)</h3>
+          <p>Bot Python qui publie une image météo de la NC toutes les 2h.</p>
+          <a href="https://x.com/NC_Meteo" target="_blank" class="glitch x-button">Voir le compte X</a>
+        </article>
+
+        <article class="project">
+          <h3>🖥️ Gadget : Flipper Zero</h3>
+          <p>Un outil fun pour la cybersécurité : il peut émuler une Yubikey ou lancer des attaques Bluetooth inoffensives (Iphone only 😇).</p>
+          <div class="sketchfab-embed-wrapper" style="margin-top: 1em;">
+            <iframe title="Flipper Zero"
+              frameborder="0"
+              allowfullscreen
+              mozallowfullscreen="true"
+              webkitallowfullscreen="true"
+              allow="autoplay; fullscreen; xr-spatial-tracking"
+              src="https://sketchfab.com/models/f8ad3fdf5f2b485ba46b0ac91626fc76/embed"
+              style="width: 100%; height: 330px;"></iframe>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Me contacter</h2>
+      <ul>
+        <li>📧 <a href="mailto:karatemarine@gmail.com">karatemarine@gmail.com</a></li>
+        <li>🐙 <a href="https://github.com/Vin-svg" target="_blank" rel="noopener">github.com/Vin-svg</a></li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <p>Fait à la main, sans framework lourd, et probablement hébergé sur un Raspberry ou une VM Debian 🌍</p>
+    <p>© 2025 Lieeexxx — <a href="https://github.com/Vin-svg" target="_blank" rel="noopener">GitHub</a></p>
   </footer>
 
-</body>
-<script>
-// Effet machine à écrire sur le titre h1
-const titre = "Salut, moi c'est Lieeexxx 👋";
-const h1 = document.querySelector("header h1");
-let index = 0;
-
-function typeWriter() {
-  if (index < titre.length) {
-    h1.textContent += titre.charAt(index);
-    index++;
-    setTimeout(typeWriter, 50);
-  }
-}
-h1.textContent = "";
-typeWriter();
-
-// Animation au scroll avec IntersectionObserver
-const sections = document.querySelectorAll("section, .project, footer");
-
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("animate");
-      obs.unobserve(entry.target); // pour que ça ne rejoue pas à chaque scroll
+  <script>
+    // Machine à écrire
+    const titre = "Salut, moi c'est Lieeexxx 👋";
+    const h1 = document.querySelector("header h1");
+    let index = 0;
+    function typeWriter() {
+      if (index < titre.length) {
+        h1.textContent += titre.charAt(index);
+        index++;
+        setTimeout(typeWriter, 50);
+      }
     }
-  });
-}, {
-  threshold: 0.1
-});
+    h1.textContent = "";
+    typeWriter();
 
-sections.forEach(section => {
-  observer.observe(section);
-});
-// Initialize PowerGlitch on elements with the 'glitch' class
-  PowerGlitch.glitch('.glitch');
-</script>
+    // Animation au scroll
+    const sections = document.querySelectorAll("section, .project, footer");
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
 
+    // PowerGlitch
+    PowerGlitch.glitch('.glitch-text');
+    PowerGlitch.glitch('.glitch');
+  </script>
+</body>
 </html>
