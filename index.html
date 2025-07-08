@@ -13,15 +13,8 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
     <h1 class="glitch-text" data-text="Salut, moi c'est Lieeexxx 👋">Salut, moi c'est Lieeexxx 👋</h1>
-    <p class="subtitle">Je bidouille, je code, je hacke mes volets roulants avec un Wemos D1 Mini et Home Assistant ⚡<br>Entre autres 👾</p>
+    <p class="subtitle">Passionné par le développement, la bidouille et la cybersécurité, j’automatise mes objets connectés (comme mes volets roulants) avec un Wemos D1 Mini et Home Assistant ⚡<br>Entre autres 👾</p>
   </header>
 
   <main>
@@ -32,7 +25,7 @@
     </section>
 
     <section class="projects" id="projects">
-      <h2>Quelques projets</h2>
+      <h2>Quelques un de mes projets</h2>
       <div class="project-grid">
 
         <article class="project">
@@ -128,18 +121,6 @@
     }
     h1.textContent = "";
     typeWriter();
-
-    // Animation au scroll
-    const sections = document.querySelectorAll("section, .project, footer");
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    sections.forEach(section => observer.observe(section));
 
     // PowerGlitch
     PowerGlitch.glitch('.glitch-text');
