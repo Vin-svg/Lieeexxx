@@ -122,6 +122,18 @@
     h1.textContent = "";
     typeWriter();
 
+        // Animation au scroll
+    const sections = document.querySelectorAll("section, .project, footer");
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+    
     // PowerGlitch
     PowerGlitch.glitch('.glitch-text');
     PowerGlitch.glitch('.glitch');
