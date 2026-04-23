@@ -1,0 +1,13 @@
+services:
+  portfolio:
+    build: .
+    container_name: portfolio-lieeexxx
+    restart: unless-stopped
+    ports:
+      - "2006:8080"
+    networks:
+      - nginx_default
+
+networks:
+  nginx_default:
+    external: true
