@@ -1,0 +1,15 @@
+services:
+  portfolio:
+    build: .
+    container_name: portfolio-lieeexxx
+    restart: unless-stopped
+    networks:
+      - portfolio
+      - proxy
+
+networks:
+  portfolio:
+    name: portfolio
+    driver: bridge
+  proxy:
+    external: true

@@ -4,127 +4,216 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio | Lieeexxx</title>
-  <meta name="description" content="Portfolio de Lieeexxx : projets tech, scripts Python, Home Assistant, gadgets, et plus encore.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Portfolio de Lieeexxx : projets tech, scripts Python, Home Assistant, cybersécurité, et plus encore.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portfolio | Lieeexxx">
+  <meta property="og:description" content="Réseautique, cybersécurité, homelab : projets et expérimentations.">
+  <meta property="og:url" content="https://www.lieeexxx.fr">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e0e0e'/%3E%3Ctext x='16' y='23' font-family='monospace' font-size='20' font-weight='bold' fill='%234cd137' text-anchor='middle'%3E&gt;_%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="style.css?v=4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
-    <h1 class="glitch-text" data-text="Salut, moi c'est Lieeexxx 👋">Salut, moi c'est Lieeexxx 👋</h1>
-    <p class="subtitle">Passionné par le développement et la cybersécurité, j’automatise des objets non connectés avec un Wemos D1 Mini et Home Assistant ⚡<br>Entre autres 👾</p>
+    <h1>Lieeexxx</h1>
+    <p class="subtitle">Passionné de réseaux et de cybersécurité. J'aime comprendre le fonctionnement des systèmes et automatiser ce qui peut l'être, de l'électronique embarquée à l'infrastructure serveur.</p>
+    <nav class="tabs">
+      <a href="#about" class="active">À propos</a>
+      <a href="#projects">Projets</a>
+      <a href="#infra">Infra</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <section class="about" id="about">
+
+    <section id="about">
       <h2>À propos</h2>
-      <p>👨‍💻 Passionné de tech, de Linux, Proxmox, de projets DIY (Home Assistant, Raspberry Pi, ESP...), et de cybersécurité.</p>
-      <p>Je développe surtout en <strong>Python</strong> (Flask, ESPHome), mais j’aime expérimenter et apprendre de nouveaux outils. J’aime quand les choses fonctionnent <strong>localement, sans cloud vulnérable</strong>.</p>
+      <p>Je m'intéresse à des technologies comme Linux, Python, Home Assistant, Proxmox, Raspberry Pi ou l'ESP8266, avec une préférence pour les solutions auto-hébergées plutôt que dépendantes d'un cloud tiers.</p>
+      <p>J'administre un homelab sous <a href="https://www.proxmox.com" target="_blank" rel="noopener"><strong>Proxmox</strong></a>, où j'héberge plusieurs services : reverse proxy, domotique, photos, stockage, sauvegardes et serveurs de jeux via <a href="https://pelican.dev" target="_blank" rel="noopener"><strong>Pelican</strong></a>. Au-delà de faire fonctionner un système, ce qui m'intéresse c'est de comprendre pourquoi il fonctionne. Le détail est dans l'onglet <a href="#infra">Infra</a>.</p>
     </section>
 
-    <section class="projects" id="projects">
-      <h2>Quelques un de mes projets</h2>
-      <div class="project-grid">
+    <section id="projects" hidden>
+      <h2>Projets</h2>
 
-        <article class="project">
-          <h3>📡 Statistiques <a href="https://wigle.net" target="_blank" rel="noopener">Wigle</a></h3>
-          <p>Avec <a href="https://torik.fr" target="_blank" rel="noopener">Torik</a>, on capte des réseaux Wi-Fi en NC !</p>
-          <div class="wigle-stats">
-            <img src="https://wigle.net/bi/KJjGzzTmVik+iNcmrSVWNA.png" alt="Statistiques WiGLE - vinvic" loading="lazy">
-            <img src="https://wigle.net/bi/a7fSR43Qm7H9lbpFtei71A.png" alt="Statistiques WiGLE - justvin" loading="lazy">
+      <article class="project">
+        <h3>Cartographie Wi-Fi (Wardriving) — <a href="https://wigle.net" target="_blank" rel="noopener">WiGLE</a></h3>
+        <p>Avec <a href="https://torik.fr" target="_blank" rel="noopener">Torik</a>, nous recensons les réseaux Wi-Fi visibles publiquement en Nouvelle-Calédonie, dans le cadre du projet collaboratif WiGLE qui les géolocalise sur une carte mondiale. Une démarche purement passive : seules les informations diffusées publiquement (SSID, position) sont collectées.</p>
+        <div class="wigle-stats">
+          <img src="https://wigle.net/bi/KJjGzzTmVik+iNcmrSVWNA.png" alt="Statistiques WiGLE - vinvic" loading="lazy">
+          <img src="https://wigle.net/bi/a7fSR43Qm7H9lbpFtei71A.png" alt="Statistiques WiGLE - justvin" loading="lazy">
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>Bot météo automatisé — Nouvelle-Calédonie</h3>
+        <p>Bot Python qui publie automatiquement une image météo de la Nouvelle-Calédonie toutes les deux heures sur X.</p>
+        <div class="x-timeline">
+          <a class="twitter-timeline"
+             data-theme="dark"
+             data-chrome="noheader nofooter noborders transparent"
+             data-height="500"
+             data-dnt="true"
+             href="https://twitter.com/NC_Meteo?ref_src=twsrc%5Etfw">Tweets de @NC_Meteo</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>Gamify School — application mobile éducative</h3>
+        <p>Application mobile pensée pour rendre l'apprentissage au lycée plus engageant, à travers des mécaniques de jeu : progression, récompenses, défis.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/cJWdNXvi4po"
+                  title="Gamify School Demo"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>Animation 3D — Blender</h3>
+        <p>Premier projet d'animation 3D, avec simulation de fluide sous Blender.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/wlbFZDnonDA"
+                  title="Animation Blender Loukoum"
+                  frameborder="0"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>Flipper Zero — tests de sécurité matérielle</h3>
+        <p>Outil polyvalent utilisé pour des tests de sécurité sur du matériel radio : émulation Yubikey, RF, NFC, et audit de l'exposition Bluetooth des appareils à proximité.</p>
+        <div class="sketchfab-embed-wrapper">
+          <iframe title="Flipper Zero"
+            frameborder="0"
+            allowfullscreen
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true"
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            src="https://sketchfab.com/models/f8ad3fdf5f2b485ba46b0ac91626fc76/embed"
+            loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>Meshtastic — communication longue portée</h3>
+        <p>J'utilise deux appareils Heltec V3 (ESP32 + LoRa) sous <a href="https://meshtastic.org" target="_blank" rel="noopener">Meshtastic</a>, un firmware open source qui permet de créer un réseau maillé décentralisé sans passer par le réseau cellulaire ni par Internet. L'un des deux tourne sur batteries 18650, pour une autonomie et une portabilité accrues sur le terrain.</p>
+        <p>Le LoRa (Long Range) est une technologie radio basse consommation capable de couvrir plusieurs kilomètres en zone dégagée. Des projets comme Meshtastic ou MeshCore s'appuient dessus pour bâtir des réseaux mesh ouverts, et je pense que cette technologie a un vrai avenir : communication hors-réseau en randonnée ou en montagne, coordination lors d'événements ou de situations d'urgence, capteurs IoT longue portée... les cas d'usage sont encore largement à explorer.</p>
+        <p>Sa compatibilité avec <a href="https://tak.gov" target="_blank" rel="noopener">ATAK</a> mérite d'être plus connue : elle permet de visualiser la position d'une équipe en temps réel sans infrastructure réseau, un vrai atout pour la sécurité en randonnée comme pour la coordination de professionnels (pompiers, forces de l'ordre).</p>
+      </article>
+
+    </section>
+
+    <section id="infra" hidden>
+      <h2>Infrastructure</h2>
+      <p>Aperçu général des briques que j'utilise dans mon homelab. C'est volontairement une vue d'ensemble, pas un plan détaillé ; chaque brique renvoie vers son projet.</p>
+
+      <div class="arch" role="group" aria-label="Schéma de l'architecture du homelab">
+
+        <div class="layer">
+          <span class="layer-label">Accès</span>
+          <div class="nodes">
+            <a class="node" href="https://netbird.io" target="_blank" rel="noopener"><i class="dot"></i>NetBird<small>VPN mesh</small></a>
           </div>
-        </article>
+        </div>
 
-        <article class="project">
-          <h3>🌀 Animation 3D avec Blender</h3>
-          <p>Mon premier essai d’animation 3D sur Blender… avec un loukoum 🤷‍♂️</p>
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/wlbFZDnonDA"
-                    title="Animation Blender Loukoum"
-                    frameborder="0"
-                    allowfullscreen loading="lazy"></iframe>
+        <div class="flow-v" aria-hidden="true"></div>
+
+        <div class="layer">
+          <span class="layer-label">Services</span>
+          <div class="nodes">
+            <a class="node" href="https://www.home-assistant.io" target="_blank" rel="noopener"><i class="dot"></i>Home Assistant<small>domotique</small></a>
+            <a class="node" href="https://immich.app" target="_blank" rel="noopener"><i class="dot"></i>Immich<small>photos</small></a>
+            <a class="node" href="https://pelican.dev" target="_blank" rel="noopener"><i class="dot"></i>Pelican<small>serveurs de jeux</small></a>
+            <a class="node" href="https://uptime.kuma.pet" target="_blank" rel="noopener"><i class="dot"></i>Uptime Kuma<small>supervision</small>
+              <span class="kuma" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></span>
+            </a>
           </div>
-        </article>
+        </div>
 
-        <article class="project">
-          <h3>📱 Gamify School</h3>
-          <p>Un jeu mobile pour rendre l’apprentissage au lycée plus fun !</p>
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/cJWdNXvi4po"
-                    title="Gamify School Demo"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen loading="lazy"></iframe>
+        <div class="flow-v" aria-hidden="true"></div>
+
+        <div class="layer">
+          <span class="layer-label">Virtualisation</span>
+          <div class="nodes">
+            <a class="node wide" href="https://www.proxmox.com" target="_blank" rel="noopener"><i class="dot"></i>Proxmox VE<small>virtualisation</small></a>
           </div>
-        </article>
+        </div>
 
-        <article class="project">
-          <h3>🌦️ Bot météo pour X (Twitter)</h3>
-          <p>Bot Python qui publie une image météo de la NC toutes les 2h.</p>
-          <a href="https://x.com/NC_Meteo" target="_blank" class="glitch x-button">Voir le compte X</a>
-        </article>
+        <div class="flow-v" aria-hidden="true"></div>
 
-        <article class="project">
-          <h3>🖥️ Gadget : Flipper Zero</h3>
-          <p>Un outil fun pour la cybersécurité : il peut émuler une Yubikey ou lancer des attaques Bluetooth inoffensives (Iphone only 😇).</p>
-          <div class="sketchfab-embed-wrapper" style="margin-top: 1em;">
-            <iframe title="Flipper Zero"
-              frameborder="0"
-              allowfullscreen
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              src="https://sketchfab.com/models/f8ad3fdf5f2b485ba46b0ac91626fc76/embed"
-              style="width: 100%; height: 330px;"></iframe>
+        <div class="layer">
+          <span class="layer-label">Stockage &amp; sauvegarde</span>
+          <div class="nodes">
+            <a class="node" href="https://www.truenas.com" target="_blank" rel="noopener"><i class="dot"></i>TrueNAS<small>NAS</small></a>
+            <a class="node" href="https://min.io" target="_blank" rel="noopener"><i class="dot"></i>MinIO<small>stockage S3</small></a>
+            <a class="node" href="https://www.proxmox.com/en/products/proxmox-backup-server/overview" target="_blank" rel="noopener"><i class="dot"></i>PBS<small>sauvegardes</small></a>
           </div>
-        </article>
+        </div>
+
       </div>
-    </section>
 
-    <section class="contact" id="contact">
-      <h2>Me contacter</h2>
-      <ul>
-        <li>🐙</li>
+      <h3 class="sub">Domotique : Home Assistant + Zigbee</h3>
+      <p>Les capteurs et actionneurs Zigbee communiquent en local avec Home Assistant, sans passer par le cloud d'un constructeur.</p>
+
+      <div class="zigbee" role="group" aria-label="Chaîne Zigbee vers Home Assistant">
+        <a class="node" href="https://csa-iot.org/all-solutions/zigbee/" target="_blank" rel="noopener"><i class="dot"></i>Capteurs Zigbee<small>capteurs</small></a>
+        <div class="flow-h" aria-hidden="true"></div>
+        <span class="node"><i class="dot"></i>Passerelle Zigbee<small>réseau local</small></span>
+        <div class="flow-h" aria-hidden="true"></div>
+        <a class="node" href="https://www.home-assistant.io" target="_blank" rel="noopener"><i class="dot"></i>Home Assistant<small>automatisations</small></a>
+      </div>
+
+      <h3 class="sub">Les outils</h3>
+      <ul class="tools">
+        <li><a href="https://www.proxmox.com" target="_blank" rel="noopener">Proxmox VE</a> — hyperviseur de virtualisation.</li>
+        <li><a href="https://www.proxmox.com/en/products/proxmox-backup-server/overview" target="_blank" rel="noopener">Proxmox Backup Server</a> — solution de sauvegarde.</li>
+        <li><a href="https://www.truenas.com" target="_blank" rel="noopener">TrueNAS</a> — stockage réseau basé sur ZFS.</li>
+        <li><a href="https://min.io" target="_blank" rel="noopener">MinIO</a> — stockage objet compatible S3, auto-hébergé.</li>
+        <li><a href="https://immich.app" target="_blank" rel="noopener">Immich</a> — gestion de photos et vidéos auto-hébergée.</li>
+        <li><a href="https://uptime.kuma.pet" target="_blank" rel="noopener">Uptime Kuma</a> — supervision de la disponibilité des services.</li>
+        <li><a href="https://netbird.io" target="_blank" rel="noopener">NetBird</a> — VPN mesh pour accéder au homelab à distance.</li>
+        <li><a href="https://pelican.dev" target="_blank" rel="noopener">Pelican</a> — panel de gestion de serveurs de jeux.</li>
+        <li><a href="https://www.home-assistant.io" target="_blank" rel="noopener">Home Assistant</a> + <a href="https://csa-iot.org/all-solutions/zigbee/" target="_blank" rel="noopener">Zigbee</a> — domotique locale.</li>
       </ul>
     </section>
+
+    <section id="hardware" hidden>
+      <h2>Hardware</h2>
+      <p>Ma carte programmable de prédilection : l'<strong>ESP32</strong>, pour sa polyvalence et son Wi-Fi/Bluetooth intégrés.</p>
+      <ul>
+        <li><strong>ESP32</strong> — le microcontrôleur que j'utilise le plus, toutes plateformes confondues.</li>
+        <li><strong>Heltec V3</strong> (ESP32 + LoRa) — mes deux appareils <a href="#projects">Meshtastic</a>, dont un sur batteries 18650 pour la portabilité.</li>
+        <li><strong>ESP8266</strong> — pour les projets IoT plus légers.</li>
+        <li><strong>Raspberry Pi</strong> — dès qu'il faut un vrai OS Linux embarqué.</li>
+        <li><strong>Flipper Zero</strong> — mon outil de test cybersécurité (RF, NFC, Bluetooth).</li>
+      </ul>
+    </section>
+
+    <section id="contact" hidden>
+      <h2>Contact</h2>
+      <ul>
+        <li>Email — <a href="mailto:virgil@lieeexxx.fr">virgil@lieeexxx.fr</a></li>
+        <li>GitHub — <a href="https://github.com/Vin-svg" target="_blank" rel="noopener">github.com/Vin-svg</a></li>
+      </ul>
+    </section>
+
   </main>
 
   <footer>
-    <p>© 2025 Lieeexxx</a></p>
+    <p>© 2026 Lieeexxx</p>
   </footer>
 
-  <script>
-    // Machine à écrire
-    const titre = "Salut, moi c'est Lieeexxx 👋";
-    const h1 = document.querySelector("header h1");
-    let index = 0;
-    function typeWriter() {
-      if (index < titre.length) {
-        h1.textContent += titre.charAt(index);
-        index++;
-        setTimeout(typeWriter, 50);
-      }
-    }
-    h1.textContent = "";
-    typeWriter();
-
-        // Animation au scroll
-    const sections = document.querySelectorAll("section, .project, footer");
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    sections.forEach(section => observer.observe(section));
-    
-    // PowerGlitch
-    PowerGlitch.glitch('.glitch-text');
-    PowerGlitch.glitch('.glitch');
-  </script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="main.js?v=3" defer></script>
 </body>
 </html>
