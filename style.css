@@ -48,6 +48,14 @@ header {
   margin-bottom: 3em;
 }
 
+header h1 a {
+  color: inherit;
+}
+
+header h1 a:hover {
+  text-decoration: none;
+}
+
 header h1 {
   font-size: clamp(2rem, 6vw, 3rem);
   font-weight: 700;
@@ -409,6 +417,17 @@ a.node:hover {
 @media (prefers-reduced-motion: reduce) {
   .dot, .kuma b, .flow-v::after, .flow-h::after { animation: none; }
   .kuma b { opacity: 0.6; }
+}
+
+/* Home table of contents */
+.toc {
+  list-style: none;
+}
+
+.toc li {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin-bottom: 0.7em;
 }
 
 /* Footer */

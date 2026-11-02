@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infra | Lieeexxx</title>
+  <meta name="description" content="Aperçu des outils utilisés dans le homelab de Lieeexxx : virtualisation, stockage, sauvegarde, domotique Zigbee et supervision.">
+  <link rel="canonical" href="https://www.lieeexxx.fr/infra">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lieeexxx">
+  <meta property="og:title" content="Infra | Lieeexxx">
+  <meta property="og:description" content="Aperçu des outils utilisés dans le homelab de Lieeexxx : virtualisation, stockage, sauvegarde, domotique Zigbee et supervision.">
+  <meta property="og:url" content="https://www.lieeexxx.fr/infra">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/style.css?v=5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1><a href="/">Lieeexxx</a></h1>
+    <p class="subtitle">Passionné de réseaux et de cybersécurité. J'aime comprendre le fonctionnement des systèmes et automatiser ce qui peut l'être, de l'électronique embarquée à l'infrastructure serveur.</p>
+    <nav class="tabs">
+      <a href="/a-propos">À propos</a>
+      <a href="/projets">Projets</a>
+      <a href="/infra" class="active" aria-current="page">Infra</a>
+      <a href="/hardware">Hardware</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="infra">
+      <h2>Infrastructure</h2>
+      <p>Aperçu général des briques que j'utilise dans mon homelab. C'est volontairement une vue d'ensemble, pas un plan détaillé ; chaque brique renvoie vers son projet.</p>
+
+      <div class="arch" role="group" aria-label="Schéma de l'architecture du homelab">
+
+        <div class="layer">
+          <span class="layer-label">Accès</span>
+          <div class="nodes">
+            <a class="node" href="https://netbird.io" target="_blank" rel="noopener"><i class="dot"></i>NetBird<small>VPN mesh</small></a>
+          </div>
+        </div>
+
+        <div class="flow-v" aria-hidden="true"></div>
+
+        <div class="layer">
+          <span class="layer-label">Services</span>
+          <div class="nodes">
+            <a class="node" href="https://www.home-assistant.io" target="_blank" rel="noopener"><i class="dot"></i>Home Assistant<small>domotique</small></a>
+            <a class="node" href="https://immich.app" target="_blank" rel="noopener"><i class="dot"></i>Immich<small>photos</small></a>
+            <a class="node" href="https://pelican.dev" target="_blank" rel="noopener"><i class="dot"></i>Pelican<small>serveurs de jeux</small></a>
+            <a class="node" href="https://uptime.kuma.pet" target="_blank" rel="noopener"><i class="dot"></i>Uptime Kuma<small>supervision</small>
+              <span class="kuma" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="flow-v" aria-hidden="true"></div>
+
+        <div class="layer">
+          <span class="layer-label">Virtualisation</span>
+          <div class="nodes">
+            <a class="node wide" href="https://www.proxmox.com" target="_blank" rel="noopener"><i class="dot"></i>Proxmox VE<small>virtualisation</small></a>
+          </div>
+        </div>
+
+        <div class="flow-v" aria-hidden="true"></div>
+
+        <div class="layer">
+          <span class="layer-label">Stockage &amp; sauvegarde</span>
+          <div class="nodes">
+            <a class="node" href="https://www.truenas.com" target="_blank" rel="noopener"><i class="dot"></i>TrueNAS<small>NAS</small></a>
+            <a class="node" href="https://min.io" target="_blank" rel="noopener"><i class="dot"></i>MinIO<small>stockage S3</small></a>
+            <a class="node" href="https://www.proxmox.com/en/products/proxmox-backup-server/overview" target="_blank" rel="noopener"><i class="dot"></i>PBS<small>sauvegardes</small></a>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 class="sub">Domotique : Home Assistant + Zigbee</h3>
+      <p>Les capteurs et actionneurs Zigbee communiquent en local avec Home Assistant, sans passer par le cloud d'un constructeur.</p>
+
+      <div class="zigbee" role="group" aria-label="Chaîne Zigbee vers Home Assistant">
+        <a class="node" href="https://csa-iot.org/all-solutions/zigbee/" target="_blank" rel="noopener"><i class="dot"></i>Capteurs Zigbee<small>capteurs</small></a>
+        <div class="flow-h" aria-hidden="true"></div>
+        <span class="node"><i class="dot"></i>Passerelle Zigbee<small>réseau local</small></span>
+        <div class="flow-h" aria-hidden="true"></div>
+        <a class="node" href="https://www.home-assistant.io" target="_blank" rel="noopener"><i class="dot"></i>Home Assistant<small>automatisations</small></a>
+      </div>
+
+      <h3 class="sub">Les outils</h3>
+      <ul class="tools">
+        <li><a href="https://www.proxmox.com" target="_blank" rel="noopener">Proxmox VE</a> — hyperviseur de virtualisation.</li>
+        <li><a href="https://www.proxmox.com/en/products/proxmox-backup-server/overview" target="_blank" rel="noopener">Proxmox Backup Server</a> — solution de sauvegarde.</li>
+        <li><a href="https://www.truenas.com" target="_blank" rel="noopener">TrueNAS</a> — stockage réseau basé sur ZFS.</li>
+        <li><a href="https://min.io" target="_blank" rel="noopener">MinIO</a> — stockage objet compatible S3, auto-hébergé.</li>
+        <li><a href="https://immich.app" target="_blank" rel="noopener">Immich</a> — gestion de photos et vidéos auto-hébergée.</li>
+        <li><a href="https://uptime.kuma.pet" target="_blank" rel="noopener">Uptime Kuma</a> — supervision de la disponibilité des services.</li>
+        <li><a href="https://netbird.io" target="_blank" rel="noopener">NetBird</a> — VPN mesh pour accéder au homelab à distance.</li>
+        <li><a href="https://pelican.dev" target="_blank" rel="noopener">Pelican</a> — panel de gestion de serveurs de jeux.</li>
+        <li><a href="https://www.home-assistant.io" target="_blank" rel="noopener">Home Assistant</a> + <a href="https://csa-iot.org/all-solutions/zigbee/" target="_blank" rel="noopener">Zigbee</a> — domotique locale.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Lieeexxx</p>
+  </footer>
+
+  <script src="/main.js?v=4" defer></script>
+</body>
+</html>

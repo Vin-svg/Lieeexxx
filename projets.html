@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projets | Lieeexxx</title>
+  <meta name="description" content="Wardriving WiGLE, bot météo, Gamify School, animation Blender, Flipper Zero et Meshtastic : les projets de Lieeexxx.">
+  <link rel="canonical" href="https://www.lieeexxx.fr/projets">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lieeexxx">
+  <meta property="og:title" content="Projets | Lieeexxx">
+  <meta property="og:description" content="Wardriving WiGLE, bot météo, Gamify School, animation Blender, Flipper Zero et Meshtastic : les projets de Lieeexxx.">
+  <meta property="og:url" content="https://www.lieeexxx.fr/projets">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="/style.css?v=5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1><a href="/">Lieeexxx</a></h1>
+    <p class="subtitle">Passionné de réseaux et de cybersécurité. J'aime comprendre le fonctionnement des systèmes et automatiser ce qui peut l'être, de l'électronique embarquée à l'infrastructure serveur.</p>
+    <nav class="tabs">
+      <a href="/a-propos">À propos</a>
+      <a href="/projets" class="active" aria-current="page">Projets</a>
+      <a href="/infra">Infra</a>
+      <a href="/hardware">Hardware</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="projects">
+      <h2>Projets</h2>
+
+      <article class="project">
+        <h3>Cartographie Wi-Fi (Wardriving) — <a href="https://wigle.net" target="_blank" rel="noopener">WiGLE</a></h3>
+        <p>Avec <a href="https://torik.fr" target="_blank" rel="noopener">Torik</a>, nous recensons les réseaux Wi-Fi visibles publiquement en Nouvelle-Calédonie, dans le cadre du projet collaboratif WiGLE qui les géolocalise sur une carte mondiale. Une démarche purement passive : seules les informations diffusées publiquement (SSID, position) sont collectées.</p>
+        <div class="wigle-stats">
+          <img src="https://wigle.net/bi/KJjGzzTmVik+iNcmrSVWNA.png" alt="Statistiques WiGLE - vinvic" loading="lazy">
+          <img src="https://wigle.net/bi/a7fSR43Qm7H9lbpFtei71A.png" alt="Statistiques WiGLE - justvin" loading="lazy">
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>Bot météo automatisé — Nouvelle-Calédonie</h3>
+        <p>Bot Python qui publie automatiquement une image météo de la Nouvelle-Calédonie toutes les deux heures sur X.</p>
+        <div class="x-timeline">
+          <a class="twitter-timeline"
+             data-theme="dark"
+             data-chrome="noheader nofooter noborders transparent"
+             data-height="500"
+             data-dnt="true"
+             href="https://twitter.com/NC_Meteo?ref_src=twsrc%5Etfw">Tweets de @NC_Meteo</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>Gamify School — application mobile éducative</h3>
+        <p>Application mobile pensée pour rendre l'apprentissage au lycée plus engageant, à travers des mécaniques de jeu : progression, récompenses, défis.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/cJWdNXvi4po"
+                  title="Gamify School Demo"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>Animation 3D — Blender</h3>
+        <p>Premier projet d'animation 3D, avec simulation de fluide sous Blender.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/wlbFZDnonDA"
+                  title="Animation Blender Loukoum"
+                  frameborder="0"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>Flipper Zero — tests de sécurité matérielle</h3>
+        <p>Outil polyvalent utilisé pour des tests de sécurité sur du matériel radio : émulation Yubikey, RF, NFC, et audit de l'exposition Bluetooth des appareils à proximité.</p>
+        <div class="sketchfab-embed-wrapper">
+          <iframe title="Flipper Zero"
+            frameborder="0"
+            allowfullscreen
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true"
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            src="https://sketchfab.com/models/f8ad3fdf5f2b485ba46b0ac91626fc76/embed"
+            loading="lazy"></iframe>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>Meshtastic — communication longue portée</h3>
+        <p>J'utilise deux appareils Heltec V3 (ESP32 + LoRa) sous <a href="https://meshtastic.org" target="_blank" rel="noopener">Meshtastic</a>, un firmware open source qui permet de créer un réseau maillé décentralisé sans passer par le réseau cellulaire ni par Internet. L'un des deux tourne sur batteries 18650, pour une autonomie et une portabilité accrues sur le terrain.</p>
+        <p>Le LoRa (Long Range) est une technologie radio basse consommation capable de couvrir plusieurs kilomètres en zone dégagée. Des projets comme Meshtastic ou MeshCore s'appuient dessus pour bâtir des réseaux mesh ouverts, et je pense que cette technologie a un vrai avenir : communication hors-réseau en randonnée ou en montagne, coordination lors d'événements ou de situations d'urgence, capteurs IoT longue portée... les cas d'usage sont encore largement à explorer.</p>
+        <p>Sa compatibilité avec <a href="https://tak.gov" target="_blank" rel="noopener">ATAK</a> mérite d'être plus connue : elle permet de visualiser la position d'une équipe en temps réel sans infrastructure réseau, un vrai atout pour la sécurité en randonnée comme pour la coordination de professionnels (pompiers, forces de l'ordre).</p>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Lieeexxx</p>
+  </footer>
+
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="/main.js?v=4" defer></script>
+</body>
+</html>
