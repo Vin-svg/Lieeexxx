@@ -13,6 +13,14 @@ services:
       - traefik.http.routers.portfolio.entrypoints=websecure
       - traefik.http.routers.portfolio.tls=true
       - traefik.http.services.portfolio.loadbalancer.server.port=8080
+      - traefik.http.routers.portfolio-apex.rule=Host(`lieeexxx.fr`)
+      - traefik.http.routers.portfolio-apex.entrypoints=websecure
+      - traefik.http.routers.portfolio-apex.tls=true
+      - traefik.http.routers.portfolio-apex.middlewares=portfolio-www
+      - traefik.http.routers.portfolio-apex.service=portfolio
+      - traefik.http.middlewares.portfolio-www.redirectregex.regex=^https://lieeexxx\.fr/(.*)
+      - traefik.http.middlewares.portfolio-www.redirectregex.replacement=https://www.lieeexxx.fr/$${1}
+      - traefik.http.middlewares.portfolio-www.redirectregex.permanent=true
 
 networks:
   portfolio:
